@@ -1,3 +1,1 @@
-$(document).ready(function() {
-  alert("Hi bunny!");
-});
+alert("Hi Bunny!/nLove you!");
