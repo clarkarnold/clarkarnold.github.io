@@ -1,1 +1,1 @@
-alert("Hi Bunny!/nLove you!");
+alert("Hi Bunny!\nLove you!");
