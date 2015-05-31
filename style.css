@@ -1,3 +1,6 @@
 ol {
   list-style-type: hebrew;
 }
+img {
+  max-height: 100px;
+}
