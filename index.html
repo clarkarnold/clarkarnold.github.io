@@ -1,115 +1,385 @@
-<DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+
+	<meta charset="utf-8">
 	<title>Clark Arnold</title>
-	<meta charset='utf-8'>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Clark Arnold Personal Webpage">
+	<meta name="theme-color" content="black">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Lekton:400,700' rel='stylesheet' type='text/css'>
+
+	<script>
+	$(document).ready(function() {
+		var custom =  $.support.touch ? "tap" : "click";
+
+
+		$('#mybtn').on(custom, function() {
+		  $(this).toggleClass('expanded').siblings('div').slideToggle();
+		});
+		$('#mm').on(custom, function() {
+		  $(this).slideUp();
+		  $('#mybtn').toggleClass('expanded');
+		})
+		
+		
+	});
+
+	
+
+	</script>
 	<style>
-		body {
-			position: relative;
-			font-family: Tahoma,sans-serif;
-		}
 
-		#home {padding-top: 50px;height: 600px;color:#fff;}
-		#About {padding-top: 50px;height: 600px;color:#fff;background-image:url(http://s19.postimg.org/kxq7wvdsz/airport.jpg); color: #000}
-		#Portfolio {padding-top: 50px;height: 600px;color:#fff;background-image: url(http://s19.postimg.org/5p9hakyw3/trees.jpg); color:#222;}
-		#Contact {padding-top: 50px;height: 600px;color:#fff;background-image: url(http://s19.postimg.org/6atusy4kj/sunset.jpg);}
-		#addr {color: #111;}
-		#p-padding {margin-top: 5px; color: white;}
-		.desc {color: orange;}
+* {
+	background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/concrete_seamless.png);
+}
+.mobile {
+  display: none;
+  
+  width: 100%;
+  top: 0;
+  background: none;
+}
+.mobile div {
+  display: none;
+  width: 65%;
+  margin: 2px auto;
+}
 
+
+.mobile button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border 0;
+  color: #fff5ee;
+  background: black;
+  font-family: Lekton, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  overflow: hidden;
+  border: none;
+  border-radius: 3px;
+  width: auto;
+  height:34px;
+  outline: none;
+  z-index: 1;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+.mobile button.expanded {
+    -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background-color: transparent;
+  color: black;
+  border: 0;
+  right: 10px;
+  
+  
+}
+
+.mobile a {
+  display: block; 
+}
+.mobile a:last-child {
+  border-radius: 0px 0px 5px 5px;
+}
+.desktop a {
+  background: #ffe6d5;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  font-family: Lekton, sans-serif;
+}
+
+.mobile a {
+  background: white;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  font-family: Lekton, sans-serif;
+}
+
+a:hover,
+a:active,
+a:focus {
+  background: #fff5ee;
+  text-decoration: none;
+  color: black;
+}
+
+.desktop {
+  display: block;
+  overflow: hidden;
+}
+.desktop a {
+  background: none;
+  width: 20%;
+  float: left;
+  border: none;
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 800px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+  
+}
+
+
+
+.hide {
+  display: none;
+}
+
+
+#home {
+  font-family: Lekton, sans-serif;
+  text-align: right;
+  padding: 50px 20px 0px 0px;
+  height: 100vh;
+}
+#home h1 {
+	background-color: transparent;
+}
+#home h2 {
+	background-color: transparent;
+}
+#s2 {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+#home a {
+	background-color: black;
+	color: white;
+	height: 30px;
+	width: auto;
+	text-transform: uppercase;
+	border-radius: 3px;
+	padding: 5px;
+	margin-top: 10px;
+}
+
+#home img {
+  max-width: 250px;
+  margin: 100px auto 20px auto;
+}
+
+#about {
+  font-family: Lekton, sans-serif;
+  font-size: 1.5em;
+  height: 70vh;
+  margin-bottom: 25px;
+}
+#about h2 {
+	background-color: transparent;
+}
+#about p {
+	background-color: transparent;
+}
+#portfolio {
+	font-family: Lekton, sans-serif;
+	margin-bottom: 50px;
+}
+#portfolio h3 {
+	font-size: 2.5em;
+	margin-bottom: 30px;
+
+}
+#portfolio p {
+	font-size: 1.3em;
+
+}
+.port-item {
+	border-bottom: 1px solid black;
+}
+.port-item img {
+	max-width: 250px;
+	margin-bottom: 5px;
+
+}
+
+#contact {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.mail {
+	font-family: Lekton, sans-serif;
+	text-align: center;
+	background: none;
+	font-weight: normal;
+	font-size: 2em;
+	display: block;
+	margin-bottom: 5px;
+	color: black;
+}
+.mail:hover {
+	letter-spacing: 0.5px;
+}
+.my-button {
+	
+	border: 1.5px solid #aab5b8;
+	border-radius: 4px;
+	box-shadow: none;
+	color: black;
+	height: 40px;
+	width: 140px;
+	margin: 5px auto;
+
+}
+.fa {
+	background: #e2e5e6;
+	border-radius: 5px;
+}
+.my-button:hover {
+	font-weight: bold;
+	box-shadow: 1px 1px 2px black;
+}
+
+#mButtn {
+  background: black;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 400px) {
+  #about p {
+    text-align: left;
+    padding-left: 15px;
+  }
+  #home img {
+    width: 160px;
+    margin-top: -10px;
+    padding-top: 0px;
+  }
+}
+@media (min-width: 600px) {
+	#head {
+		padding-top: 100px;
+	}
+	#home {
+		padding-right: 50px;
+	}
+	#about {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+	
+}
+
+body {
+	background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/squared_metal.png");
+}
 	</style>
-
 </head>
 <body>
-	<div class="container-fluid">
-		<nav class="navbar navbar-default navbar-fixed-top">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">Clark Arnold</a>
+	
+<div class="container-fluid">
+  <div class="navbar">
+    <nav class="desktop">
+      <a href="#home">clarnold</a>
+      <a href="#about">about</a>
+      <a href="#portfolio">portfolio</a>
+      <a href="#contact">contact</a>
+      <a href="http://clarnold.com/blog/" target="_blank">blog</a>
+      </nav>
+    <nav class="mobile">
+      <button id="mybtn">MENU</button>
+      <div id="mm" class="">
+      <a href="#home">clarnold</a>
+      <a href="#about">about</a>
+      <a href="#portfolio">portfolio</a>
+      <a href="#contact">contact</a>
+      <a href="http://clarnold.com/blog/" target="_blank">blog</a>
+      </div>
+    </nav>
 
-		    </div>
-		    <ul class="nav navbar-nav navbar-right">
-		      <li class="active"><a href="#Home">Home</a></li>
-		      <li class="text-right"><a href="#About">About</a></li>
-		      <li class="text-right"><a href="#Portfolio">Portfolio</a></li>
-		      <li class="text-right"><a href="#Contact">Contact</a></li>
-		    </ul>
-		  </div>
-		</nav>
+  </div>
+  <div class="row text-center" id="home">
+  	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+  		<a href="#about"><img src="http://clarnold.com/images/head.jpg" class="img-responsive img-circle"></a>
+  	</div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    	<h1 id="head">I'm Clark</h1>
+    	<h2>I make websites</h2>
+    	<h2 id="s2">Lets Create Something Together</h2>
+    		<a href="mailto:me@clarnold.com" id="mButtn">email me</a>
+  	</div>
+    </div>
+  <div class="row text-center" id="about">
+    <h2>About me:</h2>
+    <p>I am a self taught web developer available for hire or freelance work.  Please take a look at my work below, and don't hesitate to get in contact with me.  </p>
 
-		<div id="Home" class="container-fluid" style="background:#cee1ee">
-			<h1 class="text-center" style="margin-top: 150px;font-size:3.5em">Clark Arnold</h1>
-			<h3 class="text-center" style="margin-top:80px">A cool dude who likes to write code and fly airplanes.</h3>
-				<div class="row text-center" style="margin-left:auto;margin-right:auto;margin-top:100px;padding-bottom:50px;">
-
-					<a href="https://github.com/clarkarnold" target="_blank"><button class="my-button ">Github <i class="fa fa-github-square"></i></button></a>
-
-					<a href="https://www.linkedin.com/in/clark-arnold-3176aaa0" target="_blank"><button class="my-button">LinkedIn <i class="fa fa-linkedin"></i></button></a>
-
-					<a href="http://www.freecodecamp.com/clarkarnold" target="_blank"><button class="my-button">freeCodeCamp <i class="fa fa-fire fa-fw"></i></button></a>
-
-					<a href="http://codepen.io/clarkarnold/" target="_blank"><button class="my-button">Codepen <i class="fa fa-codepen"></i></button></a>
-
-
-					
-				</div>
+  </div>
+  <div class="row text-center" id="portfolio">
+  		<h3>cool stuff i've done:</h3>
+  		<div class="port-item col-xs-12 col-md-6 col-lg-4">
+  			<p>wikipedia viewer</p>
+	  		<a href="http://codepen.io/clarkarnold/full/PZMJJw" target="_blank">
+				<img src="http://s19.postimg.org/i46n2d603/wiki.jpg" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px">
+			</a>
+			<p>Wikipedia API, jQuery</p>
 		</div>
-		<div id="About" class="container-fluid">
-			<p class="text-center" style="font-size:2.7em;font-family:Tahoma">Clark Arnold :</p>
-			<p class="text-center" style="font-size:1.7em;margin-top:40px">I am a self-taught web-developer and airline pilot based in South Eastern Virginia. I have a passion for learning and putting my knowledge to use solving problems everyday.</p>
+		<div class="port-item col-xs-12 col-md-6 col-lg-4">
+			<p>local weather app</p>
+			<a href="http://codepen.io/clarkarnold/full/BjbxjN/" target="_blank">
+				<img src="http://s19.postimg.org/yjg524bdv/weather_app.jpg" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px"></a>
+			<p>Openweather API, jQuery</p>
 		</div>
-		<div id="Portfolio" class="container-fluid">
-			<h1 class="text-center">Cool Stuff I've Done: </h1>
-			<br>
-			<br>
-			<div class="container-fluid bg-3 text-center">
-
-				<div class="row">
-					<div class="col-lg-4 col-md-4 col-sm-6 p-padding">
-						<p>Random Quote Generator</p>
-            <a href="http://codepen.io/clarkarnold/full/qboaQz/" target="_blank">
-						<img src="http://s19.postimg.org/5onvzzusj/capcha.png" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px"></a>
-						<p class="desc">HTML/CSS, Bootstrap Javascript/jQuery</p>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 p-padding">
-						<p>Javascript Calculator</p>
-            <a href="http://codepen.io/clarkarnold/full/RryqNZ/">
-						<img src="http://s19.postimg.org/ia4y4f5pf/calc.png" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px"></a>
-						<p class="desc">HTML/CSS, Javascript</p>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 p-padding">
-						<p>Tail & Engine</p>
-						<img src="http://s19.postimg.org/fwnf98vqb/tail.jpg" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px">
-						<p class="desc">Engine & tail during sunrise</p>
-					</div>
-				</div>
-			</div>
-
+		<div class="port-item col-xs-12 col-md-6 col-lg-4">
+			<p>twitch.tv user viewer</p>
+			<a href="codepen.io/clarkarnold/full/yOBNPM" target="_blank">
+				<img src="http://s19.postimg.org/vz4xku0f7/twitch.jpg" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px"></a>
+			<p>twitch.tv API, jQuery</p>
 		</div>
-		<div id="Contact" class="container-fluid">
-			<p class="text-center lead" style="margin-top:100px;">Please feel welcome to contact me via <a href="mailto:clark.arnold@outlook.com" id="addr">email</a> or by social media below.</p>
-					<div class="row text-center" style="margin-left:auto;margin-right:auto;margin-top:140px">
-
-					<a href="https://github.com/clarkarnold" target="_blank"><button class="btn-default btn-lg btn">Github <i class="fa fa-github-square"></i></button></a>
-
-					<a href="https://www.linkedin.com/in/clark-arnold-3176aaa0" target="_blank"><button class="btn-default btn-lg btn">LinkedIn <i class="fa fa-linkedin"></i></button></a>
-
-					<a href="http://www.freecodecamp.com/clarkarnold" target="_blank"><button class="btn-default btn-lg btn">freeCodeCamp <i class="fa fa-fire fa-fw"></i></button></a>
-
-					<a href="http://codepen.io/clarkarnold/" target="_blank"><button class="btn-default btn-lg btn">Codepen <i class="fa fa-codepen"></i></button></a>
-
-
-					
-				</div>
+		<div class="port-item col-xs-12 col-md-6 col-lg-4">
+			<p>pomodoro timer</p>
+			<a href="codepen.io/clarkarnold/full/xZJQMV" target="_blank">
+				<img src="http://s19.postimg.org/88uopoucj/pomodoro.png" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px"></a>
+			<p>HTML/CSS Javascript</p>
+		</div>
+		<div class="port-item col-xs-12 col-md-6 col-lg-4">
+			<p>basic calculator</p>
+			<a href="codepen.io/clarkarnold/full/RryqNZ" target="_blank">
+				<img src="http://s19.postimg.org/ia4y4f5pf/calc.png" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px"></a>
+			<p>HTML/CSS Javascript</p>
+		</div>
+		<div class="port-item col-xs-12 col-md-6 col-lg-4">
+			<p>Simon Says</p>
+			<a href="http://clarnold.com/simon/" target="_blank">
+				<img src="http://clarnold.com/images/simonimg.png" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px" alt="Image of a Simon Says Board"></a>
+			<p>HTML/CSS jQuery</p>
 		</div>
 
-	</div>
+  </div>
+  <div class="row text-center" id="contact">
+  	<a class="mail" href="mailto:me@clarnold.com">drop me a line</a>
+	  	<a href="https://github.com/clarkarnold" target="_blank"><button class="my-button ">Github <i class="fa fa-github-square"></i></button></a>
+
+		<a href="https://www.linkedin.com/in/clark-arnold-3176aaa0" target="_blank"><button class="my-button">LinkedIn <i class="fa fa-linkedin"></i></button></a>
+
+		<a href="http://www.freecodecamp.com/clarkarnold" target="_blank"><button class="my-button">freeCodeCamp <i class="fa fa-fire fa-fw"></i></button></a>
+
+		<a href="http://codepen.io/clarkarnold/" target="_blank"><button class="my-button">Codepen <i class="fa fa-codepen"></i></button></a>
+  </div>
+  
+</div>
 
 </body>
-</html>
 
+</html>
