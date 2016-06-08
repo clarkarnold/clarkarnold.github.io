@@ -1,2 +1,2 @@
 # clarkarnold.github.io
-Just a website for fun. Thanks!
+A portfolio website on github pages.
