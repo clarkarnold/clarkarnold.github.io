@@ -1,1 +1,22 @@
 
+
+#fixed-button {
+    bottom: 45px;
+    right: 24px;    
+}
+.mainContainer {
+    background: URL("https://images.unsplash.com/photo-1441236294620-ea438327530e?format=auto&auto=compress&dpr=1.5&crop=entropy&fit=crop&w=1280&h=853&q=80") center;
+}
+.mainBody {
+    height: 90vh;
+    font-family: "Ubuntu", sans-serif;
+}
+.mainBody h1, h4 {
+    color: white;
+    text-shadow: 4px 4px 3px #333;
+}
+
+footer a {
+    color: lightgray;
+    font-size: 1.3em;
+}
