@@ -20,3 +20,10 @@ footer a {
     color: lightgray;
     font-size: 1.3em;
 }
+
+::selection {
+    background: #42a5f5;
+}
+::-moz-selection {
+    background: #42a5f5;
+}
