@@ -1,399 +1,214 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
+
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Freelance Web Developer - Clark Arnold</title>
+  <meta name="description" content="Freelance web developer Clark Arnold's personal portfolio page. Clark Arnold is a freelance web developer who can help you with your responsive website. Connect with Clark Arnold via email, or find him online on social media.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1976d2">
 
-	<meta charset="utf-8">
-	<title>Clark Arnold</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Clark Arnold Personal Webpage">
-	<meta name="theme-color" content="black">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Lekton:400,700' rel='stylesheet' type='text/css'>
-
-	<script>
-	$(document).ready(function() {
-		var custom =  $.support.touch ? "tap" : "click";
-
-
-		$('#mybtn').on(custom, function() {
-		  $(this).toggleClass('expanded').siblings('div').slideToggle();
-		});
-		$('#mm').on(custom, function() {
-		  $(this).slideUp();
-		  $('#mybtn').toggleClass('expanded');
-		})
-		
-		
-	});
-
-	
-
-	</script>
-	<style>
-
-* {
-	background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/concrete_seamless.png);
-}
-.mobile {
-  display: none;
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
   
-  width: 100%;
-  top: 0;
-  background: none;
-}
-.mobile div {
-  display: none;
-  width: 65%;
-  margin: 2px auto;
-}
-
-
-.mobile button {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  border 0;
-  color: #fff5ee;
-  background: black;
-  font-family: Lekton, sans-serif;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  overflow: hidden;
-  border: none;
-  border-radius: 3px;
-  width: auto;
-  height:34px;
-  outline: none;
-  z-index: 1;
-  -webkit-transition: all 400ms ease;
-  transition: all 400ms ease;
-}
-.mobile button.expanded {
-    -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  background-color: transparent;
-  color: black;
-  border: 0;
-  right: 10px;
-  
-  
-}
-
-.mobile a {
-  display: block; 
-}
-.mobile a:last-child {
-  border-radius: 0px 0px 5px 5px;
-}
-.desktop a {
-  background: #ffe6d5;
-  text-align: center;
-  padding: 20px 0;
-  border-bottom: 1px solid #ddd;
-  text-decoration: none;
-  color: #222;
-  font-weight: bold;
-  font-family: Lekton, sans-serif;
-}
-
-.mobile a {
-  background: white;
-  text-align: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-  text-decoration: none;
-  color: #222;
-  font-weight: bold;
-  font-family: Lekton, sans-serif;
-}
-
-a:hover,
-a:active,
-a:focus {
-  background: #fff5ee;
-  text-decoration: none;
-  color: black;
-}
-
-.desktop {
-  display: block;
-  overflow: hidden;
-}
-.desktop a {
-  background: none;
-  width: 20%;
-  float: left;
-  border: none;
-  box-sizing: border-box;
-}
-
-
-@media (max-width: 800px) {
-  .mobile {
-    display: block;
-  }
-  .desktop {
-    display: none;
-  }
-  
-}
-
-
-
-.hide {
-  display: none;
-}
-
-
-#home {
-  font-family: Lekton, sans-serif;
-  text-align: right;
-  padding: 50px 20px 0px 0px;
-  height: 100vh;
-}
-#home h1 {
-	background-color: transparent;
-}
-#home h2 {
-	background-color: transparent;
-}
-#s2 {
-	margin-bottom: 10px;
-	padding-bottom: 10px;
-}
-
-#home a {
-	background-color: black;
-	color: white;
-	height: 30px;
-	width: auto;
-	text-transform: uppercase;
-	border-radius: 3px;
-	padding: 5px;
-	margin-top: 10px;
-}
-
-#home img {
-  max-width: 250px;
-  margin: 100px auto 20px auto;
-}
-
-#about {
-  font-family: Lekton, sans-serif;
-  font-size: 1.5em;
-  height: 70vh;
-  margin-bottom: 25px;
-}
-#about h2 {
-	background-color: transparent;
-}
-#about p {
-	background-color: transparent;
-}
-#portfolio {
-	font-family: Lekton, sans-serif;
-	margin-bottom: 50px;
-}
-#portfolio h3 {
-	font-size: 2.5em;
-	margin-bottom: 30px;
-
-}
-#portfolio p {
-	font-size: 1.3em;
-
-}
-.port-item {
-	border-bottom: 1px solid black;
-}
-.port-item img {
-	max-width: 250px;
-	margin-bottom: 5px;
-
-}
-
-#contact {
-	margin-top: 100px;
-	margin-bottom: 100px;
-}
-.mail {
-	font-family: Lekton, sans-serif;
-	text-align: center;
-	background: none;
-	font-weight: normal;
-	font-size: 2em;
-	display: block;
-	margin-bottom: 5px;
-	color: black;
-}
-.mail:hover {
-	letter-spacing: 0.5px;
-}
-.my-button {
-	
-	border: 1.5px solid #aab5b8;
-	border-radius: 4px;
-	box-shadow: none;
-	color: black;
-	height: 40px;
-	width: 140px;
-	margin: 5px auto;
-
-}
-.fa {
-	background: #e2e5e6;
-	border-radius: 5px;
-}
-.my-button:hover {
-	font-weight: bold;
-	box-shadow: 1px 1px 2px black;
-}
-
-#mButtn {
-  background: black;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 400px) {
-  #about p {
-    text-align: left;
-    padding-left: 15px;
-  }
-  #home img {
-    width: 160px;
-    margin-top: -10px;
-    padding-top: 0px;
-  }
-}
-@media (min-width: 600px) {
-	#head {
-		padding-top: 100px;
-	}
-	#home {
-		padding-right: 50px;
-	}
-	#about {
-		max-width: 80%;
-		margin: 0 auto;
-	}
-	
-}
-
-body {
-	background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/squared_metal.png");
-}
-	</style>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+    
 </head>
-<body>
-	
-<div class="container-fluid">
-  <div class="navbar">
-    <nav class="desktop">
-      <a href="#home">clarnold</a>
-      <a href="#about">about</a>
-      <a href="#portfolio">portfolio</a>
-      <a href="#contact">contact</a>
-      <a href="http://clarnold.com/blog/" target="_blank">blog</a>
-      </nav>
-    <nav class="mobile">
-      <button id="mybtn">MENU</button>
-      <div id="mm" class="">
-      <a href="#home">clarnold</a>
-      <a href="#about">about</a>
-      <a href="#portfolio">portfolio</a>
-      <a href="#contact">contact</a>
-      <a href="http://clarnold.com/blog/" target="_blank">blog</a>
-      </div>
-    </nav>
 
-  </div>
-  <div class="row text-center" id="home">
-  	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-  		<a href="#about"><img src="http://clarnold.com/images/head.jpg" class="img-responsive img-circle"></a>
-  	</div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-    	<h1 id="head">I'm Clark</h1>
-    	<h2>I make websites</h2>
-    	<h2 id="s2">Lets Create Something Together</h2>
-    		<a href="mailto:me@clarnold.com" id="mButtn">email me</a>
-  	</div>
-    </div>
-  <div class="row text-center" id="about">
-    <h2>About me:</h2>
-    <p>I am a self taught web developer available for hire or freelance work.  Please take a look at my work below, and don't hesitate to get in contact with me.  </p>
+<body class="blue lighten-5">
+    <header id="home">
+        <nav class="nav-wrapper blue darken-2">
+            <a href="#home" class="brand-logo left">clarnold</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#aboutMe">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#foot">Contact</a></li>
+            </ul>
 
-  </div>
-  <div class="row text-center" id="portfolio">
-  		<h3>cool stuff i've done:</h3>
-  		<div class="port-item col-xs-12 col-md-6 col-lg-4">
-  			<p>Recipe Box</p>
-	  		<a href="http://codepen.io/clarkarnold/full/regepx" target="_blank">
-				<img src="http://codepen.io/clarkarnold/pen/regepx/image/small.png" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px">
-				<a/>
-				<p>React, ReactBootstrap, Babel</p>
-			</div>
-			<div class="port-item col-xs-12 col-md-6 col-lg-4">
-  			<p>Camper Leader Board</p>
-	  		<a href="http://codepen.io/clarkarnold/full/JXVNjb" target="_blank">
-				<img src="http://codepen.io/clarkarnold/pen/JXVNjb/image/small.png" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px">
-				<a/>
-				<p>React, Babel, FCC API</p>
-			</div>
-  		<div class="port-item col-xs-12 col-md-6 col-lg-4">
-  			<p>wikipedia viewer</p>
-	  		<a href="http://codepen.io/clarkarnold/full/PZMJJw" target="_blank">
-				<img src="http://s19.postimg.org/i46n2d603/wiki.jpg" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px">
-			</a>
-			<p>Wikipedia API, jQuery</p>
-		</div>
-		<div class="port-item col-xs-12 col-md-6 col-lg-4">
-			<p>local weather app</p>
-			<a href="http://codepen.io/clarkarnold/full/BjbxjN/" target="_blank">
-				<img src="http://s19.postimg.org/yjg524bdv/weather_app.jpg" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px"></a>
-			<p>Openweather API, jQuery</p>
-		</div>
-		<div class="port-item col-xs-12 col-md-6 col-lg-4">
-			<p>twitch.tv user viewer</p>
-			<a href="codepen.io/clarkarnold/full/yOBNPM" target="_blank">
-				<img src="http://s19.postimg.org/vz4xku0f7/twitch.jpg" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px"></a>
-			<p>twitch.tv API, jQuery</p>
-		</div>
-		<div class="port-item col-xs-12 col-md-6 col-lg-4">
-			<p>pomodoro timer</p>
-			<a href="codepen.io/clarkarnold/full/xZJQMV" target="_blank">
-				<img src="http://s19.postimg.org/88uopoucj/pomodoro.png" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px"></a>
-			<p>HTML/CSS Javascript</p>
-		</div>
-		<div class="port-item col-xs-12 col-md-6 col-lg-4">
-			<p>basic calculator</p>
-			<a href="codepen.io/clarkarnold/full/RryqNZ" target="_blank">
-				<img src="http://s19.postimg.org/ia4y4f5pf/calc.png" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px"></a>
-			<p>HTML/CSS Javascript</p>
-		</div>
-		<div class="port-item col-xs-12 col-md-6 col-lg-4">
-			<p>Simon Says</p>
-			<a href="http://clarnold.com/simon/" target="_blank">
-				<img src="http://clarnold.com/images/simonimg.png" class="img-responsive img-rounded" style="display:inline;width:100%;height:210px" alt="Image of a Simon Says Board"></a>
-			<p>HTML/CSS jQuery</p>
-		</div>
+        </nav>
+    </header>
+    
+    <main>
+       <div id="fixed-button" class="fixed-action-btn click-to-toggle hide-on-large-only">
+         <a class="btn-floating btn-large blue darken-2">
+           <i class="material-icons">menu</i>
+         </a>
+         <ul>
+           <li><a class="btn-floating btn-large red" href="#home"><i class="material-icons">home</i></a></li>
+           <li><a class="btn-floating btn-large yellow darken-1" href="#aboutMe"><i class="material-icons">favorite</i></a></li>
+           <li><a class="btn-floating btn-large green" href="#portfolio"><i class="material-icons">work</i></a></li>
+           <li><a class="btn-floating btn-large blue" href="mailto:clark.arnold@outlook.com"><i class="material-icons">mail</i></a></li>
+         </ul>
+       </div>
 
-  </div>
-  <div class="row text-center" id="contact">
-  	<a class="mail" href="mailto:me@clarnold.com">drop me a line</a>
-	  	<a href="https://github.com/clarkarnold" target="_blank"><button class="my-button ">Github <i class="fa fa-github-square"></i></button></a>
+        <div class="mainContainer"><!-- Start of main Body Area-->
+            <div class="valign-wrapper mainBody container">
+                <div  class="valign">
+                    <h1>Clark Arnold</h1>
 
-		<a href="https://www.linkedin.com/in/clark-arnold-3176aaa0" target="_blank"><button class="my-button">LinkedIn <i class="fa fa-linkedin"></i></button></a>
+                    <h4>Web Developer</h4>
 
-		<a href="http://www.freecodecamp.com/clarkarnold" target="_blank"><button class="my-button">freeCodeCamp <i class="fa fa-fire fa-fw"></i></button></a>
+                    <a href="mailto:clark.arnold@outlook.com" class="btn waves-effect blue hide-on-med-and-down">Email Me</a>
+                </div>
+            </div>
+        </div>
+        <!-- End of Main Body Area-->
 
-		<a href="http://codepen.io/clarkarnold/" target="_blank"><button class="my-button">Codepen <i class="fa fa-codepen"></i></button></a>
-  </div>
-  
-</div>
+        <!--Begining of about me Area-->
+        <div class="aboutMe blue lighten-5" id="aboutMe">
+            <div class="row container">
+              <div class="col">
+                <h3>About Me</h3>
+                <p>I've been working on front end web developement since early 2015. What originally started as something to do with my spare time has become much more. Solving problems became an addiction, and I would love to help you with yours! I am available for freelance or contract developement work, if you want to chat or have a project please send me an email. </p>
 
+                <p>When I'm not coding I am usually at the beach, on the slopes, or hanging out with my dog Coleman.</p>
+              </div>
+
+            </div>
+          <div class="row container">
+            <div class="col s12 m6">
+              <div class="card blue lighten-4">
+                <div class="card-content">
+                  <span class="card-title">Technologies</span>
+                  <ul class="collection">
+                    <li class="collection-item blue lighten-4">HTML5</li>
+                      <li class="collection-item blue lighten-4">CSS3/SCSS</li>
+                      <li class="collection-item blue lighten-4">javaScript</li>
+                      <li class="collection-item blue lighten-4">Gulp</li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+              <div class="col s12 m6">
+              <div class="card blue lighten-4">
+                <div class="card-content">
+                  <span class="card-title">Libraries</span>
+                  <ul class="collection">
+                    <li class="collection-item blue lighten-4">jQuery</li>
+                      <li class="collection-item blue lighten-4">React.js</li>
+                      <li class="collection-item blue lighten-4">ReactBootstrap</li>
+                      <li class="collection-item blue lighten-4">Materialize.css</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <!--End of about me Area-->
+
+        <!--Portfolio Items-->
+        <div class="blue lighten-5" id="portfolio">
+            <div class="container">
+
+                <div class="row">
+                    <h3>Recent Work</h3>
+
+                </div>
+
+              <div class="row">
+                <div class="col s12 m4">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="http://codepen.io/clarkarnold/pen/regepx/image/small.png" alt="Screenshot image of Recipe Box project">
+
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Recipe Box</span>
+                      <p>Made with React.js and ReactBootstrap</p>
+                    </div>
+                    <div class="card-action">
+                      <a class="btn blue lighten-2 waves-effect" href="http://codepen.io/clarkarnold/pen/regepx" target="_blank">View on Codepen</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col s12 m4">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="http://codepen.io/clarkarnold/pen/JXVNjb/image/small.png" alt="screenshot of free code camp leader board project">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title black-text">FCC Leaderboard</span>
+                      <p>Made with React.js and Babel, styled using SCSS</p>
+                    </div>
+                    <div class="card-action">
+                      <a class="btn blue lighten-2 waves-effect" href="http://codepen.io/clarkarnold/pen/JXVNjb" target="_blank">View on Codepen</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col s12 m4">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="http://codepen.io/clarkarnold/pen/pyYyQR/image/small.png" alt="screenshot of markdown previewer project">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title black-text">Markdown Preview</span>
+                      <p>Made with react.js and the Markdown library</p>
+                    </div>
+                    <div class="card-action">
+                      <a class="btn blue lighten-2 waves-effect" href="http://codepen.io/clarkarnold/pen/pyYyQR" target="_blank">View on Codepen</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+        </div>
+    <!--end of Portfolio Items-->
+        
+    </main>
+    
+    <footer class="page-footer blue darken-2" id="foot">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Let's Talk!</h5>
+                    <p class="white-text">Feel welcome to send me an <a class="" href="mailto:clark.arnold@outlook.com">email</a>.</p>
+                </div>
+                <div class="col l4 s12">
+                    <h5 class="white-text">Find me online</h5>
+                    <ul>
+                        <li class="grey-text text-lighten-4"><a href="http://codepen.io/clarkarnold/" target="_blank">Codepen</a></li>
+                        <li class="grey-text text-lighten-4"><a href="https://github.com/clarkarnold" target="_blank">Github</a></li>
+                        <li class="grey-text text-lighten-4"><a href="https://www.linkedin.com/in/clark-arnold-3176aaa0" target="_blank">Linkedin</a></li>
+                        <li class="grey-text text-lighten-4"><a href="http://www.freecodecamp.com/clarkarnold" target="_blank">FreeCodeCamp</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    <!-- JS on the page -->
+    /* Function defined to enable smoother scrolling between sections */
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                        if (target.length) {
+                            $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 600);
+                return false;
+                    }
+                }
+            });
+        });
+
+  </script>
 </body>
-
 </html>
